@@ -1,0 +1,23 @@
+
+.freelancelot-notice {
+	border-left-color: #db2b35;
+}
+
+.freelancelot-notice .container {
+	display: inline-block;
+	width: 100%;
+}
+
+.freelancelot-notice .logo {
+	float: left;
+	margin: .5em .7em .5em 0;
+}
+
+.freelancelot-notice p {
+	float: left;
+	display: inline-block;
+}
+
+.freelancelot-notice .dismiss {
+	padding-left: .4em;
+}

@@ -1,0 +1,581 @@
+/*
+Theme Name: Snowflakes
+Theme URI: https://catchthemes.com/themes/snowflakes/
+Author: Catch Themes
+Author URI: https://catchthemes.com/
+Description: Snowflakes is a Christmas version of our popular Photography WordPress theme - Fotografie. Snowflakes, a child theme of Fotografie is a new Holiday Photography WordPress theme that will give your website a warm and welcoming look and feel of the festival, holiday, Christmas. Snowflakes purely focus on providing your website a festive look with the vibrant color palette. Snowflakes provides you with awesome features such as header media options, hero content, portfolio, featured content, color options, menu options and more to create a simple and elegant photography website. What else can be better for your visitors than giving your website the Christmassy feel this merry season, right? Celebrate this Christmas and give your website a fresh welcoming look with our new Christmassy Photography WordPress theme, Snowflakes. This theme is translation ready. For more details, check out the Theme Instructions at https://catchthemes.com/theme-instructions/snowflakes/ and Support forum at https://catchthemes.com/support-forum/forum/snowflakes-free/.
+Template: fotografie
+Version: 1.0
+Requires at least: 5.1
+Tested up to: 5.4
+Requires PHP: 5.6
+License: GNU General Public License v3 or later
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
+Text Domain: snowflakes
+Tags: one-column, two-columns, left-sidebar,  flexible-header, custom-background, custom-logo, custom-header, custom-menu, editor-style, featured-image-header, featured-images, footer-widgets, rtl-language-support, translation-ready, blog, photography, holiday
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Clearings
+# Typography
+# Formattings
+# Navigation
+# Layout
+	## Header
+	## Content
+	## Slider
+# Media Queries
+	## >= 900px
+	## >= 768px
+	## >= 1200px
+	## >= 1536px
+# Colors
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Clearings
+--------------------------------------------------------------*/
+.site-header-main:before,
+.site-header-main:after {
+  content: "";
+  display: table;
+  table-layout: fixed;
+}
+
+.site-header-main:after {
+  clear: both;
+}
+
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+body,
+input,
+select,
+textarea,
+.site-description,
+.widget .widget-title,
+.widget .entry-title {
+	font-family: 'EB Garamond', serif;
+}
+
+.site-title,
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Dancing Script', cursive;
+	letter-spacing: normal;
+}
+
+.site-title,
+.custom-header .entry-title,
+#feature-slider .entry-title,
+.blog-section-headline .page-title,
+.site-info {
+	text-transform: capitalize;
+}
+
+.custom-header .entry-title,
+.site-content .blog-section-headline .page-title {
+	font-size: 40px;
+	font-size: 2.5rem;
+}
+
+.site-title,
+.blog-section-headline .page-title {
+	font-size: 32px;
+	font-size: 2rem;
+}
+
+.custom-header,
+.portfolio-wrapper .entry-title {
+	font-size: 22px;
+	font-size: 1.375rem;
+}
+
+.site-info {
+	font-size: 16px;
+	font-size: 1rem;
+	letter-spacing: 0.10em;
+}
+
+.site-title,
+.custom-header,
+.custom-header .entry-title,
+.blog-section-headline .page-title {
+	line-height: 1.4;
+}
+
+.entry-title {
+	text-transform: none;
+}
+
+blockquote {
+	font-size: 24px;
+	font-size: 1.5rem;
+	margin: 28px 0;
+	padding-left: 28px;
+	border-left: 4px solid;
+}
+
+blockquote cite {
+	font-size: 16px;
+	font-size: 1rem;
+}
+
+blockquote:before {
+	display: none;
+}
+
+/*--------------------------------------------------------------
+# Formattings
+--------------------------------------------------------------*/
+.drop-cap:first-letter {
+  font-size: 120px;
+  font-size: 7.5rem;
+  margin: 10px 16px 6px -3px;
+}
+
+/*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+.button,
+.comment-navigation a,
+.posts-navigation a,
+.site-main #infinite-handle span button,
+.site-main #infinite-handle span button:hover,
+.site-main #infinite-handle span button:focus {
+	padding-top: 7px;
+	padding-bottom: 7px;
+}
+
+/*--------------------------------------------------------------
+# Layout
+--------------------------------------------------------------*/
+.site-inner {
+	max-width: 1500px;
+}
+
+/*--------------------------------------------------------------
+## Header
+--------------------------------------------------------------*/
+.custom-header {
+	clear: both;
+	display: block;
+	position: relative;
+	overflow: hidden;
+}
+
+.header-button {
+	clear: both;
+	display: block;
+	margin-top: 21px;
+}
+
+.custom-header-media img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+
+/* For browsers that support 'object-fit' & Browser less then 900 */
+@media screen and (max-width: 56.25em) {
+	@supports ( object-fit: cover ) {
+		.custom-header-media img {
+			height: 100%;
+			left: 0;
+			-o-object-fit: cover;
+			object-fit: cover;
+			top: 0;
+			-ms-transform: none;
+			-moz-transform: none;
+			-webkit-transform: none;
+			transform: none;
+			width: 100%;
+		}
+	}
+}
+
+.custom-header-content {
+	background: rgba(0,0,0,0.25);
+	display: block;
+	padding: 120px 35px;
+	position: relative;
+	text-align: center;
+	width: 100%;
+}
+
+.wp-custom-header-video-button {
+	bottom: 0;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 199;
+}
+
+/*--------------------------------------------------------------
+## Content
+--------------------------------------------------------------*/
+.blog-section-headline {
+	margin: 35px;
+}
+
+.blog-section-headline .page-title {
+	padding: 0 35px;
+}
+
+.page-title-wrapper:before {
+		display: none;
+}
+
+/*--------------------------------------------------------------
+## Slider
+--------------------------------------------------------------*/
+#feature-slider .slider-content-wrapper {
+	background: rgba( 0, 0, 0, 0.25 );
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	-webkit-transform: none;
+	-moz-transform: none;
+	-ms-transform: none;
+	-o-transform: none;
+	transform: none;
+}
+
+#feature-slider .entry-container {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+}
+
+#feature-slider .entry-container,
+.custom-header-content-wrapper {
+	max-width: 756px
+}
+
+#feature-slider .more-link span {
+	border: none;
+	font-size: 15px;
+	font-size: 0.9375rem;
+	padding-top: 7px;
+	padding-bottom: 7px;
+}
+
+#feature-slider .cycle-pager span {
+	width: 20px;
+}
+
+#feature-slider .cycle-pager {
+	bottom: 10px;
+}
+
+/*--------------------------------------------------------------
+# Media Queries
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+## >= 900px
+--------------------------------------------------------------*/
+@media screen and (min-width: 56.25em) {
+	.custom-header-content {
+		padding: 35px;
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+	}
+
+	.custom-header-content-wrapper {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		text-align: center;
+	}
+
+	.custom-header-media img {
+		position: relative;
+		top: auto;
+		left: auto;
+	}
+}
+
+
+/*--------------------------------------------------------------
+## >= 768px
+--------------------------------------------------------------*/
+@media screen and (min-width: 48em) {
+	#page {
+		padding: 0 4%;
+	}
+
+	.portfolio-wrapper .hentry .portfolio-entry-header {
+		border-bottom: 1px solid;
+		border-left: 1px solid;
+	}
+
+	.four-columns .portfolio-wrapper .hentry:nth-child(4n+1) .portfolio-entry-header,
+	.three-columns .portfolio-wrapper .hentry:nth-child(3n+1) .portfolio-entry-header {
+		border-left: none;
+	}
+}
+
+/*--------------------------------------------------------------
+## >= 1200px
+--------------------------------------------------------------*/
+@media screen and (min-width: 75em) {
+	#page {
+		padding: 0 90px;
+	}
+
+	.site-content .blog-section-headline .page-title {
+		font-size: 90px;
+		font-size: 5.625rem;
+	}
+
+	.custom-header .entry-title,
+	#feature-slider .entry-title {
+		font-size: 72px;
+		font-size: 4.5rem;
+	}
+
+	.site-title,
+	.blog-section-headline .page-title {
+		font-size: 48px;
+		font-size: 3rem;
+	}
+
+	.custom-header,
+	.portfolio-wrapper .entry-title {
+		font-size: 28px;
+		font-size: 1.75rem;
+	}
+
+	.site-title,
+	.custom-header,
+	.custom-header .entry-title,
+	#feature-slider .entry-title,
+	.blog-section-headline .page-title {
+		line-height: 1.16;
+	}
+
+	h1,
+	.entry-title {
+		font-size: 50px;
+		font-size: 3.125rem;
+	}
+
+	h2 {
+	    font-size: 40px;
+	    font-size: 2.5rem;
+	}
+
+	h3 {
+		font-size: 32px;
+		font-size: 2rem;
+	}
+
+	blockquote {
+		font-size: 28px;
+		font-size: 1.75rem;
+	}
+
+	h4 {
+		font-size: 24px;
+		font-size: 1.5rem;
+	}
+
+	h5,
+	body {
+		font-size: 20px;
+		font-size: 1.25rem;
+	}
+
+	h6 {
+		font-size: 18px;
+		font-size: 1.125rem;
+	}
+
+	.widget-area .widget-title,
+	.widget-area {
+		font-size: 18px;
+		font-size: 1.125rem;
+	}
+
+	.site-content .blog-section-headline {
+		margin: 70px;
+	}
+
+	.site-content .blog-section-headline .page-title {
+		padding: 0 7px;
+	}
+
+	.wp-custom-header-video-button {
+		bottom: 35px;
+	}
+
+	.post-archive .post-thumbnail {
+		width: 40%;
+	}
+
+	.post-archive .content-right {
+		width: 60%;
+	}
+
+	.post-archive .content-right,
+	.hero-content-wrapper .entry-container {
+		padding: 98px 70px;
+	}
+
+	#feature-slider .cycle-pager span {
+		width: 40px;
+	}
+
+	#feature-slider .cycle-pager {
+		bottom: 20px;
+	}
+}
+
+/*--------------------------------------------------------------
+## >= 1536px
+--------------------------------------------------------------*/
+@media screen and (min-width: 96em) {
+	.post-archive .post-thumbnail {
+		width: 33.3125%;
+	}
+
+	.post-archive .content-right {
+		width: 66.6875%;
+	}
+
+	.post-archive .content-right,
+	.hero-content-wrapper .entry-container {
+		padding: 112px 84px;
+	}
+}
+
+/*--------------------------------------------------------------
+# Colors
+--------------------------------------------------------------*/
+body {
+	background-color: #e4e1e2;
+}
+
+.site-inner {
+	background-color: #f9f7f1;
+}
+
+#masthead,
+.site-footer,
+.main-navigation ul ul {
+	background-color: #ce4754;
+}
+
+blockquote {
+	border-color: #ce4754;
+}
+
+.site-header-menu,
+.menu-toggle-wrapper,
+.main-navigation li,
+.mobile-search-wrapper {
+	border-color: #d45d69;
+}
+
+.portfolio-wrapper .hentry,
+.portfolio-wrapper .hentry:nth-child(2n),
+.post-archive .hentry:nth-child(2n) .entry-container {
+	background-color: #fff;
+}
+
+.site-title a,
+.site-description,
+.custom-header,
+.custom-header a,
+.custom-header .entry-title,
+#feature-slider .entry-title,
+#secondary .social-navigation a:hover,
+#secondary .social-navigation a:focus {
+	color: #fff;
+}
+
+a {
+	color: #4c774c;
+}
+
+.button,
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+.comment-navigation a,
+.posts-navigation a,
+.site-main #infinite-handle span button,
+#scrollup,
+.menu-toggle:hover,
+.menu-toggle:focus,
+.menu-toggle.toggled-on,
+.wp-custom-header-video-button,
+.post-archive .hentry.sticky .entry-container,
+.post-archive .sticky.hentry:nth-child(2n) .entry-container,
+#secondary .social-navigation a:hover,
+#secondary .social-navigation a:focus,
+#feature-slider .more-link span,
+#feature-slider .cycle-prev,
+#feature-slider .cycle-next {
+	background-color: #4c774c;
+}
+
+#secondary .social-navigation a:hover,
+#secondary .social-navigation a:focus,
+#feature-slider .cycle-prev,
+#feature-slider .cycle-next {
+	border-color: #4c774c;
+}
+
+.button:hover,
+.button:focus,
+button:hover,
+button:focus,
+.comment-navigation a:hover,
+.comment-navigation a:focus,
+.posts-navigation a:hover,
+.posts-navigation a:focus,
+.post-navigation a:hover,
+.post-navigation a:focus,
+.site-main #infinite-handle span button:hover,
+.site-main #infinite-handle span button:focus,
+#scrollup:hover,
+#scrollup:focus {
+	background-color: #000;
+}
+
+.portfolio-wrapper .hentry .portfolio-entry-header {
+	border-color: #eeece6;
+}
+
+.social-navigation a {
+	border-color: rgba(255, 255, 255, 0.70);
+	color: rgba(255, 255, 255, 0.70);
+}
+
+#secondary .social-navigation a {
+	border-color: rgba(0, 0, 0, 0.70);
+	color: rgba(0, 0, 0, 0.70);
+}
+
+.blog-section-headline .page-title,
+.main-navigation ul ul a:hover,
+.main-navigation ul ul > li.focus > a {
+    background-color: transparent;
+}
