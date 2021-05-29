@@ -29,7 +29,7 @@ define( 'DB_USER', 'npak0382_aminaNBA' );
 define( 'DB_PASSWORD', 'aminaNBA123' );
 
 /** MySQL hostname */
-define( 'DB_HOST', 'localhost' );
+define( 'DB_HOST', '109.234.160.63' );
 
 /** Database Charset to use in creating database tables. */
 define( 'DB_CHARSET', 'utf8mb4' );
